@@ -16,6 +16,22 @@ Ext.define('DbsLamMenuItemModel',{
 
 
 
+Ext.define('DbsLamTransferInputPoModel',{
+	extend: 'Ext.data.Model',
+	idProperty: 'id',
+	fields: [
+		{name: 'transferinputpo_filerecord_id', type:'int', allowNull:true},
+		{name: 'transferstep_filerecord_id', type:'int'},
+		
+		{name: 'po_txt', type: 'string'},
+		{name: 'stk_prod', type: 'string'},
+		{name: 'qty_po', type: 'number', allowNull:true},
+		{name: 'qty_input', type: 'number', allowNull:true},
+		
+		{name: '_input_is_on', type: 'boolean'}
+	]
+});
+
 Ext.define('DbsLamTransferLigModel',{
 	extend: 'Ext.data.Model',
 	idProperty: 'transferlig_filerecord_id',
