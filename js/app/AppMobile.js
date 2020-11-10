@@ -312,8 +312,8 @@ Ext.define('Optima5.AppMobile',{
 		
 		var moduleClass = '' ;
 		switch( moduleCfg.moduleId ) {
-			case 'spec_dbs_lam' :
-				moduleClass = 'Optima5.Modules.Spec.DbsLam.DbsLamModuleMobile' ;
+			case 'spec_dbs_tracy' :
+				moduleClass = 'Optima5.Modules.Spec.DbsTracy.DbsTracyModuleMobile' ;
 				break ;
 		}
 		

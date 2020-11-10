@@ -1,1 +1,0 @@
-../../../../../paracrm.main/js/app/Modules/Spec/DbsLam/GunPackingResult.js

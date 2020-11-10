@@ -8,7 +8,7 @@ Ext.Loader.setConfig({
 });
 
 Ext.require('Optima5.AppMobile');
-Ext.require('Optima5.Modules.Spec.DbsLam.DbsLamModuleMobile');
+Ext.require('Optima5.Modules.Spec.DbsTracy.DbsTracyModuleMobile');
 
 var op5desktop, op5session ;
 Ext.onReady(function () {
