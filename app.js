@@ -14,6 +14,20 @@ var op5desktop, op5session ;
 Ext.onReady(function () {
 	
 	/*
+	 * From Ext 5.1.1, Floating inside other ELs seem to mess with Ext.dom.GarbageCollector
+	 * Guess: Ext.util.Floating tries to reuse shadows cleared/invalidated by garbageCollector before ???
+	 */
+	Ext.util.Floating.override({
+		//shadow: false
+	}) ;
+	Ext.dom.Underlay.override({
+		hide: function() {
+			this.callOverridden(arguments) ;
+			this.getPool().reset() ;
+		}
+	}) ;
+	
+	/*
 	Désactiver le click droit
 	*/
 	Ext.getDoc().on('contextmenu', function(e){
