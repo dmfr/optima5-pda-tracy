@@ -41,7 +41,7 @@ Ext.define('Optima5.Modules.Spec.DbsTracy.DbsTracyModuleMobile', {
 			border: false,
 			items:[Ext.create('Optima5.Modules.Spec.DbsTracy.GunPanel',{
 				optimaModule: me,
-				_registerFocus: true
+				_registerFocus: false
 			})]
 		}) ;
 	},
