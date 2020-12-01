@@ -264,5 +264,7 @@ Ext.define('Optima5.ModuleMobile',{
 		var me = this ;
 		delete me.app ;
 		me.fireEvent('modulestop',me) ;
-	}
+	},
+	
+	postCrmEvent: function( crmEvent, postParams ) {}
 });

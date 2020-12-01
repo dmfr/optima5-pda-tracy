@@ -53,6 +53,12 @@ Ext.define('Optima5.Modules.Spec.DbsTracy.DbsTracyModuleMobile', {
 		
 		var eventParams = {} ;
 		switch( crmEvent ) {
+			case 'scan' :
+				Ext.apply( eventParams, {
+					scanResult: postParams.scanResult
+				}) ;
+				break ;
+			
 			case 'datachange' :
 				break ;
 			

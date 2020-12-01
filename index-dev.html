@@ -18,6 +18,29 @@
 		
 		<script type="text/javascript" src="app.js"></script>
 	<!-- </x-compile> -->
+	
+	<script>
+	function postFromJava(javaEvent, ...javaParams) {
+		var crmEvent ;
+		switch( javaEvent ) {
+			case 'scan' :
+				crmEvent = javaEvent ;
+				var postParams = {
+					scanResult: javaParams[0]
+				} ;
+				break ;
+		}
+		if( !crmEvent ) {
+			//Ext.MessageBox.alert('Warning','Unknown java event') ;
+			return ;
+		}
+	
+		var activeModule = Optima5.Modules.Spec.DbsTracy.GunHelper.getActiveModule() ;
+		if( activeModule ) {
+			activeModule.postCrmEvent(crmEvent,postParams) ;
+		}
+	}
+	</script>
 </head>
 <body>
     <div id="loading">
