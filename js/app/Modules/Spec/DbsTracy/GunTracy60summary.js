@@ -1,1 +1,1 @@
-/var/www/html/paracrm.master.tracy.mobile/paracrm.main/js/app/Modules/Spec/DbsTracy/GunTracy60summary.js
+../../../../../paracrm.main/js/app/Modules/Spec/DbsTracy/GunTracy60summary.js
