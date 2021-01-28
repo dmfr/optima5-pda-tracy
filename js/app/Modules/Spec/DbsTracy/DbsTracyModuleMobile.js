@@ -53,6 +53,19 @@ Ext.define('Optima5.Modules.Spec.DbsTracy.DbsTracyModuleMobile', {
 		
 		var eventParams = {} ;
 		switch( crmEvent ) {
+			case 'sign_open' :
+				if( !Android || !Android.signatureOpen ) {
+					break ;
+				}
+				Android.signatureOpen() ;
+				return true ;
+				
+			case 'sign_result' :
+				Ext.apply( eventParams, {
+					imgJpegBase64: postParams.imgJpegBase64
+				}) ;
+				break ;
+			
 			case 'scan' :
 				Ext.apply( eventParams, {
 					scanResult: postParams.scanResult

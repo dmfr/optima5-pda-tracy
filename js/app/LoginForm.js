@@ -4,6 +4,7 @@
  */
 Ext.define('Optima5.LoginForm',{
 	extend  :'Ext.form.Panel',
+	scrollable: 'vertical',
 	
 	requires: [
 		'Ext.form.field.Display'
@@ -20,6 +21,7 @@ Ext.define('Optima5.LoginForm',{
 			bodyPadding: 10,
 			bodyCls: 'ux-noframe-bg',
 			//region: 'center',
+			
 			defaultType: 'textfield',
 			fieldDefaults: {
 					labelAlign: 'top',

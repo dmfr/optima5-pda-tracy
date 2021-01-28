@@ -29,6 +29,12 @@
 					scanResult: javaParams[0]
 				} ;
 				break ;
+			case 'sign_result' :
+				crmEvent = javaEvent ;
+				var postParams = {
+					imgJpegBase64: javaParams[0]
+				} ;
+				break ;
 		}
 		if( !crmEvent ) {
 			//Ext.MessageBox.alert('Warning','Unknown java event') ;
